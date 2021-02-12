@@ -3,11 +3,62 @@
 <meta charset="UTF-8">
 <title>Early Years Consulting</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body {
-  background-color: lightblue;
+  background-color: #a6dcde;
 }
+
+.topnav {
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #363333;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  }
 
 img {
   max-width: 100%;
@@ -79,29 +130,37 @@ footer {
     <h2>Learn who you're working with at Early Years</h2>
 </header>
 
-<nav>
-  <ul>
-      <navOption>
-          <a href="index.html">Home</a>
-      </navOption>
+<body>
+<div class="topnav" id="myTopnav">
+  <a href="index.html">Home</a>
+  <a href="about.html" class="active">About</a>
+  <a href="services.html">Services</a>
+  <a href="workshops.html">Workshops</a>
+  <a href="resources.html">Resources</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</body>
 
-      <navOption>
-          <strong>About Us</strong>
-      </navOption>
-
-      <navOption>
-    <a href="services.html">Our Services</a>
-      </navOption>
-  </ul>
-</nav>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 
 <body>
 
-<img src="AboutUsImage.jpg" alt="Children" class="banner">
+<img src="AboutUsImage.jpg" alt="Children" class="banner" style="padding-top: 25px;">
 
 
 <p>
-Early Years is a group of caring professionals dedicated to helping you smooth out the develpmental bumps along the way to healthy and satisfying family relationships.
+Early Years is a group of caring professionals dedicated to helping you smooth out the develpmental bumps along the way to healthy and satisfying relationships.
 </p>
 
 <p>
